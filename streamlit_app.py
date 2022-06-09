@@ -21,8 +21,9 @@ chart_data = pd.DataFrame(
      columns=['a', 'b', 'c'])
 
 st.line_chart(chart_data)
+st.write(datetime.datetime.now())
 
 d = st.date_input(
      "Nowday",
-     datetime.datetime.now().strftime("%Y-%m-%d"))
+     datetime.datetime.now())
 st.write('Nowday is:', d)
