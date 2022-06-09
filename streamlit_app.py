@@ -1,5 +1,5 @@
 import streamlit as st
-import os, random, pandas as pd
+import os, random, pandas as pd, numpy as np
 
 cp = os.path.dirname(os.path.abspath(__file__))
 
