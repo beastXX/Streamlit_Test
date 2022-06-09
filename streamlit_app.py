@@ -45,7 +45,7 @@ placeholder = st.empty()
 bar = st.progress(0)
 
 for i in range(100):
-    time.sleep(0.05)
+    time.sleep(0.5)
     # 不断更新占位符的内容
     placeholder.text(f"Iteration {i+1}")
     # 不断更新进度条
@@ -59,11 +59,11 @@ pb = st.progress(0)
 status_txt = st.empty()
 chart = st.line_chart(np.random.randn(10, 2))
 
-for i in range(30):
+for i in range(100):
     pb.progress(i)
     new_rows = np.random.randn(10, 2)
     status_txt.text(
         "The latest number is: %s" % new_rows[-1, 1]
     )
     chart.add_rows(new_rows)
-    time.sleep(0.05)
+    time.sleep(0.5)
