@@ -53,3 +53,17 @@ for i in range(100):
 
 # 状态
 st.success("Finished")
+
+
+pb = st.progress(0)
+status_txt = st.empty()
+chart = st.line_chart(np.random.randn(10, 2))
+
+for i in range(30):
+    pb.progress(i)
+    new_rows = np.random.randn(10, 2)
+    status_txt.text(
+        "The latest number is: %s" % new_rows[-1, 1]
+    )
+    chart.add_rows(new_rows)
+    time.sleep(0.05)
