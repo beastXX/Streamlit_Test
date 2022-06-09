@@ -27,3 +27,13 @@ d = st.date_input(
      "Nowday",
      datetime.datetime.now())
 st.write('Nowday is:', d)
+
+# 单选框
+st.sidebar.selectbox("Which would you like", [1, 2, 3], key="1")
+
+# 单选按钮
+st.sidebar.radio("Which would you like", [1, 2, 3], key="1")
+
+# 多选框
+selector = st.sidebar.multiselect("Which would you like", [1, 2, 3], key="3")
+st.write(selector)
