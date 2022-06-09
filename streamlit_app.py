@@ -23,6 +23,6 @@ chart_data = pd.DataFrame(
 st.line_chart(chart_data)
 
 d = st.date_input(
-     "When's your birthday",
-     datetime.date(2019, 7, 6))
-st.write('Your birthday is:', d)
+     "Nowday",
+     datetime.datetime.now().strftime("%Y-%m-%d"))
+st.write('Nowday is:', d)
