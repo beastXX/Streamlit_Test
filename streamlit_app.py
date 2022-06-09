@@ -60,7 +60,7 @@ status_txt = st.empty()
 chart = st.line_chart(np.random.randn(10, 2))
 
 for i in range(100):
-    pb.progress(i)
+    pb.progress(i + 1)
     new_rows = np.random.randn(10, 2)
     status_txt.text(
         "The latest number is: %s" % new_rows[-1, 1]
