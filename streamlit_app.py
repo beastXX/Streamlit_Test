@@ -21,3 +21,8 @@ chart_data = pd.DataFrame(
      columns=['a', 'b', 'c'])
 
 st.line_chart(chart_data)
+
+d = st.date_input(
+     "When's your birthday",
+     datetime.date(2019, 7, 6))
+st.write('Your birthday is:', d)
