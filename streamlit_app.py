@@ -37,3 +37,19 @@ st.sidebar.radio("Which would you like", [1, 2, 3], key="1")
 # 多选框
 selector = st.sidebar.multiselect("Which would you like", [1, 2, 3], key="3")
 st.write(selector)
+
+
+# 添加占位符
+placeholder = st.empty()
+# 创建进度条
+bar = st.progress(0)
+
+for i in range(100):
+    time.sleep(0.05)
+    # 不断更新占位符的内容
+    placeholder.text(f"Iteration {i+1}")
+    # 不断更新进度条
+    bar.progress(i + 1)
+
+# 状态
+st.success("Finished")
