@@ -71,4 +71,4 @@ for i in range(100):
 def test(args):
      print(args)
      return 1
-st.button("测试", help="电压调节测试", on_click=test(), args=(1,2))
+st.button("测试", help="电压调节测试", on_click=test(2), args=(1,2))
