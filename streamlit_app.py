@@ -10,7 +10,7 @@ Hello *world*
 
 st.write(cp)
 
-x = st.slider("x")
+x = st.slider("x", 0.00, 255.00, 0, 0.01)
 st.write(x, 'squared is', x * x)
 
 label = st.selectbox('Filter to:', ['A', 'B',])
