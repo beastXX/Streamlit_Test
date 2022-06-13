@@ -39,36 +39,43 @@ selector = st.sidebar.multiselect("Which would you like", [1, 2, 3], key="3")
 st.write(selector)
 
 
-# 添加占位符
-placeholder = st.empty()
-# 创建进度条
-bar = st.progress(0)
+# # 添加占位符
+# placeholder = st.empty()
+# # 创建进度条
+# bar = st.progress(0)
 
-for i in range(100):
-    time.sleep(0.01)
-    # 不断更新占位符的内容
-    placeholder.text(f"Iteration {i+1}")
-    # 不断更新进度条
-    bar.progress(i + 1)
+# for i in range(100):
+#     time.sleep(0.01)
+#     # 不断更新占位符的内容
+#     placeholder.text(f"Iteration {i+1}")
+#     # 不断更新进度条
+#     bar.progress(i + 1)
 
-# 状态
-st.success("Finished")
+# # 状态
+# st.success("Finished")
 
 
-pb = st.progress(0)
-status_txt = st.empty()
-chart = st.line_chart(np.random.randn(10, 2))
+# pb = st.progress(0)
+# status_txt = st.empty()
+# chart = st.line_chart(np.random.randn(10, 2))
 
-for i in range(100):
-    pb.progress(i + 1)
-    new_rows = np.random.randn(10, 2)
-    status_txt.text(
-        "The latest number is: %s" % new_rows[-1, 1]
-    )
-    chart.add_rows(new_rows)
-    time.sleep(0.01)
+# for i in range(100):
+#     pb.progress(i + 1)
+#     new_rows = np.random.randn(10, 2)
+#     status_txt.text(
+#         "The latest number is: %s" % new_rows[-1, 1]
+#     )
+#     chart.add_rows(new_rows)
+#     time.sleep(0.01)
 
-def test(args):
-     st.write('click')
+with st.form("my_form"):
+    st.write("Inside the form")
+    slider_val = st.slider("Form slider")
+    checkbox_val = st.checkbox("Form checkbox")
 
-st.button("测试", help="电压调节测试", on_click=test, args=(1,2))
+    # Every form must have a submit button.
+    submitted = st.form_submit_button("Submit")
+    if submitted:
+        st.write("slider", slider_val, "checkbox", checkbox_val)
+
+st.write("Outside the form")
