@@ -10,10 +10,10 @@ Hello *world*
 
 st.write(cp)
 _number = st.empty()
-x = st.slider("x", 0.00, 255.00, on_change=change_num)
-st.write(x, 'squared is', x * x)
 def change_num():
      _number.text('change')
+x = st.slider("x", 0.00, 255.00, on_change=change_num)
+st.write(x, 'squared is', x * x)
 
 label = st.selectbox('Filter to:', ['A', 'B',])
 st.write(label)
