@@ -10,7 +10,7 @@ Hello *world*
 
 st.write(cp)
 x = st.slider("x", 0.00, 5.00)
-st.write(f"""#当前电压：{Voltage}V.""".format(Voltage=x))
+st.write(f"当前电压：{Voltage}V.".format(Voltage=x))
 
 label = st.selectbox('Filter to:', ['A', 'B',])
 st.write(label)
