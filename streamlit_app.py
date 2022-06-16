@@ -15,14 +15,18 @@ st.write("当前电压：{:.2f}V".format(x))
 label = st.selectbox('Filter to:', ['A', 'B',])
 st.write(label)
 
-data_1 = pd.DataFrame({'Pin 1' : x})
-st.bar_chart(data_1)
-
-
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
      columns=['a', 'b', 'c'])
 st.line_chart(chart_data)
+
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+st.bar_chart(chart_data)
+
+data_1 = pd.DataFrame(x, columns=['Pin1'])
+st.bar_chart(data_1)
 
 st.write(datetime.datetime.now())
 
