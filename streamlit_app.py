@@ -13,7 +13,7 @@ x = st.slider("x", 0.00, 5.00)
 st.write("当前电压：{:.2f}V".format(x))
 
 data_1 = {'Pin1': x}
-st.table(date_a)
+st.table(date_1)
 
 label = st.selectbox('Filter to:', ['A', 'B',])
 st.write(label)
