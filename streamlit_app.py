@@ -21,12 +21,12 @@ chart_data = pd.DataFrame(
 st.line_chart(chart_data)
 
 chart_data = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+     np.random.randn(20, 1),
+     columns=['a'])
 st.bar_chart(chart_data)
 
-data_1 = pd.DataFrame(x, columns=['Pin1'])
-st.bar_chart(data_1)
+# data_1 = pd.DataFrame(x, columns=['Pin1'])
+# st.bar_chart(data_1)
 
 st.write(datetime.datetime.now())
 
