@@ -15,7 +15,7 @@ st.write("当前电压：{:.2f}V".format(x))
 label = st.selectbox('Filter to:', ['A', 'B',])
 st.write(label)
 
-data_1 = {'Pin 1' : x}
+data_1 = pd.DataFrame({'Pin 1' : x})
 st.bar_chart(data_1)
 
 
