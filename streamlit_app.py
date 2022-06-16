@@ -12,6 +12,9 @@ st.write(cp)
 x = st.slider("x", 0.00, 5.00)
 st.write("当前电压：{:.2f}V".format(x))
 
+data_1 = {'Pin1': x}
+st.table(date_a)
+
 label = st.selectbox('Filter to:', ['A', 'B',])
 st.write(label)
 
@@ -19,14 +22,6 @@ chart_data = pd.DataFrame(
      np.random.randn(5, 3),
      columns=['a', 'b', 'c'])
 st.line_chart(chart_data)
-
-chart_data = pd.DataFrame(
-     np.random.randn(1, 1),
-     columns=['a'])
-st.bar_chart(chart_data)
-
-# data_1 = pd.DataFrame(x, columns=['Pin1'])
-# st.bar_chart(data_1)
 
 st.write(datetime.datetime.now())
 
