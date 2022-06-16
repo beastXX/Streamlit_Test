@@ -9,11 +9,8 @@ Hello *world*
 """)
 
 st.write(cp)
-_number = st.empty()
-def change_num():
-     _number.text('change')
-x = st.slider("x", 0.00, 255.00, on_change=change_num)
-st.write(x, 'squared is', x * x)
+x = st.slider("x", 0.00, 5.00)
+st.write(f"#当前电压：{}V.".format(x))
 
 label = st.selectbox('Filter to:', ['A', 'B',])
 st.write(label)
