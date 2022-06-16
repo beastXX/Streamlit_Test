@@ -12,7 +12,8 @@ st.write(cp)
 x = st.slider("x", 0.00, 5.00)
 st.write("当前电压：{:.2f}V".format(x))
 
-data_1 = {'Pin1': x}
+data_1 = {'Pin_Num' : ['Pin_1', ], '电压': [x, ]}
+data_1 = pd.DataFrame(data_1)
 st.table(data_1)
 
 label = st.selectbox('Filter to:', ['A', 'B',])
