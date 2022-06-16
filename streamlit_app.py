@@ -17,9 +17,9 @@ st.write(label)
 
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+     columns=['a'])
 
-st.line_chart(chart_data)
+st.bar_chart(chart_data)
 st.write(datetime.datetime.now())
 
 d = st.date_input(
